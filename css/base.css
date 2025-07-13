@@ -1,0 +1,65 @@
+/* Resets básicos */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Variables CSS (Custom Properties) - AJUSTA ESTOS COLORES A LA PALETA DE DARMACIO */
+:root {
+    --primary-color: #ff6c1c; /* Naranja/Rojo de Darmacio */
+    --secondary-color: #f7f7f7; /* Gris claro de fondo */
+    --text-color-dark: #333;
+    --text-color-light: #fff;
+    --bg-dark: #212529; /* Negro oscuro para barra superior/footer */
+    --link-color: #007bff; /* Azul de enlaces */
+
+    --font-family-base: 'Ubuntu', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-family-condensed: 'Ubuntu Condensed', sans-serif;
+
+    /* Breakpoints (puntos de quiebre) - AJUSTA SEGÚN NECESITES */
+    --breakpoint-mobile-md: 480px; /* Móviles más grandes */
+    --breakpoint-tablet: 768px;
+    --breakpoint-desktop: 992px;
+    --breakpoint-large-desktop: 1200px;
+}
+
+/* Estilos base */
+body {
+    font-family: var(--font-family-base);
+    color: var(--text-color-dark);
+    line-height: 1.6;
+    background-color: #fff; /* Fondo general de la página */
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color);
+    transition: color 0.3s ease; /* Transición suave para enlaces */
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Clases de utilidad */
+.backColor {
+    background-color: var(--primary-color) !important; /* Para elementos que necesitan el color principal */
+    color: var(--text-color-light) !important;
+}
+
+.container {
+    max-width: var(--breakpoint-large-desktop); /* Ancho máximo del contenido */
+    margin: 0 auto;
+    padding: 0 15px; /* Padding a los lados para móvil y desktop */
+}

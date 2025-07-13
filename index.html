@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="es" itemscope itemtype="http://schema.org/WebPage">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="icon" href="http://darmacionline.com/ecommercecpanel/vistas/img/plantilla/icono.jpg" type="image/jpeg">
+
+    <meta name="title" content="Darmac Online - Tu Tienda de Moda y Accesorios">
+    <meta name="description" content="Descubre la última moda en ropa, lencería, calzado y accesorios para hombre, mujer, niño y niña en Darmac Online. Calidad y estilo a tu alcance.">
+    <meta name="keywords" content="Darmac, moda, ropa, lencería, calzado, accesorios, hombre, mujer, niño, niña, online, tienda virtual, promociones">
+
+    <meta property="og:title" content="Darmac Online - Moda y Accesorios">
+    <meta property="og:url" content="https://darmacionline.com/inicio">
+    <meta property="og:description" content="Descubre la última moda en ropa, lencería, calzado y accesorios para hombre, mujer, niño y niña en Darmac Online. Calidad y estilo a tu alcance.">
+    <meta property="og:image" content="http://darmacionline.com/ecommercecpanel/vistas/img/cabeceras/default.jpg">
+    <meta property="og:type" content="website">     
+    <meta property="og:site_name" content="Darmac Online">
+    <meta property="og:locale" content="es_CO">
+
+    <meta itemprop="name" content="Darmac Online">
+    <meta itemprop="url" content="https://darmacionline.com/inicio">
+    <meta itemprop="description" content="Descubre la última moda en ropa, lencería, calzado y accesorios para hombre, mujer, niño y niña en Darmac Online. Calidad y estilo a tu alcance.">
+    <meta itemprop="image" content="http://darmacionline.com/ecommercecpanel/vistas/img/cabeceras/default.jpg">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Darmac Online - Moda y Accesorios">
+    <meta name="twitter:url" content="https://darmacionline.com/inicio">
+    <meta name="twitter:description" content="Descubre la última moda en ropa, lencería, calzado y accesorios para hombre, mujer, niño y niña en Darmac Online. Calidad y estilo a tu alcance.">
+    <meta name="twitter:image" content="http://darmacionline.com/ecommercecpanel/vistas/img/cabeceras/default.jpg">
+    <meta name="twitter:site" content="@DarmacOnline">
+
+    <title>Darmac Online - Tu Tienda de Moda y Accesorios</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu%7CUbuntu+Condensed&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/plugins/bootstrap.min.css">
+    <link rel="stylesheet" href="css/plugins/font-awesome.min.css">
+    <link rel="stylesheet" href="css/plugins/flexslider.css">
+    <link rel="stylesheet" href="css/plugins/sweetalert.css">
+    <link rel="stylesheet" href="css/plugins/dscountdown.css">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+<body>
+
+    <div class="top-bar" id="top-bar">
+        <div class="container top-bar__inner">
+            <nav class="social-links">
+                <ul>
+                    <li><a href="https://www.facebook.com/darmacionline/" target="_blank" aria-label="Síguenos en Facebook"><i class="fa fa-facebook facebookColor redSocial"></i></a></li>
+                    <li><a href="https://www.youtube.com/user/DarmacOnline" target="_blank" aria-label="Síguenos en Youtube"><i class="fa fa-youtube youtubeColor redSocial"></i></a></li>
+                    <li><a href="https://twitter.com/DarmacOnline" target="_blank" aria-label="Síguenos en Twitter"><i class="fa fa-twitter twitterColor redSocial"></i></a></li>
+                    <li><a href="https://plus.google.com/DarmacOnline" target="_blank" aria-label="Síguenos en Google Plus"><i class="fa fa-google-plus google-plusColor redSocial"></i></a></li>
+                    <li><a href="https://www.instagram.com/darmacionline/" target="_blank" aria-label="Síguenos en Instagram"><i class="fa fa-instagram instagramColor redSocial"></i></a></li>
+                </ul>
+            </nav>
+
+            <div class="user-auth">
+                <ul>
+                    <li><a href="#modalIngreso" data-toggle="modal">Ingresar</a></li>
+                    <li>|</li>
+                    <li><a href="#modalRegistro" data-toggle="modal">Crear una cuenta</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header" id="main-header">
+        <div class="container main-header__inner">
+            <div class="logo">
+                <a href="https://darmacionline.com/">
+                    <img src="http://darmacionline.com/ecommercecpanel/vistas/img/plantilla/logo.jpg" alt="Logo Darmac Online">
+                </a>
+            </div>
+
+            <div class="header-search-category">
+                <button class="btn-categories" id="btnCategorias" aria-expanded="false" aria-controls="categories-nav">
+                    CATEGORÍAS <i class="fa fa-bars"></i>
+                </button>
+
+                <form class="search-form" action="https://darmacionline.com/buscador/1/recientes" method="get">
+                    <input type="search" name="buscar" class="form-control" placeholder="Buscar productos..." aria-label="Buscar productos en la tienda">
+                    <button class="btn-search" type="submit" aria-label="Iniciar búsqueda">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="cart-info">
+                <a href="https://darmacionline.com/carrito-de-compras" aria-label="Ver carrito de compras" class="btn-cart-link">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </a>
+                <p>TU CESTA <span class="quantity-cart">0</span> <br> USD $ <span class="sum-cart">0.00</span></p>
+            </div>
+        </div>
+
+        <nav class="categories-nav" id="categories-nav">
+            <div class="container categories-nav__inner">
+                <ul>
+                    <li><a href="#">Categoría 1</a></li>
+                    <li><a href="#">Categoría 2</a></li>
+                    <li><a href="#">Categoría 3</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="modal fade modalFormulario" id="modalRegistro" role="dialog" aria-labelledby="modalRegistroLabel" aria-hidden="true">
+        <div class="modal-content modal-dialog">
+            <div class="modal-body modalTitulo">
+                <h3 class="modal-title backColor" id="modalRegistroLabel">REGISTRARSE</h3>
+                
+                <div class="social-login">
+                    <p class="facebook-login"><i class="fa fa-facebook"></i> Registro con Facebook</p>
+                    <a href="https://accounts.google.com/o/oauth2/auth?response_type=code&access_type=offline&client_id=TU_CLIENT_ID_GOOGLE&redirect_uri=TU_REDIRECT_URI&state&scope=profile%20email&approval_prompt=auto">
+                        <p class="google-login"><i class="fa fa-google"></i> Registro con Google</p>
+                    </a>
+                </div>
+
+                <form method="post" onsubmit="return registroUsuario()">
+                    <hr>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input type="text" class="form-control input-lg text-uppercase" id="regUsuario" name="regUsuario" placeholder="Nombre Completo" required="" aria-label="Nombre Completo">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <input type="email" class="form-control input-lg" id="regEmail" name="regEmail" placeholder="Correo Electrónico" required="" aria-label="Correo Electrónico">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input type="password" class="form-control input-lg" id="regPassword" name="regPassword" placeholder="Contraseña" required="" aria-label="Contraseña">
+                        </div>
+                    </div>
+                    <div class="checkBox">
+                        <p>Los datos proporcionados serán utilizados únicamente con fines relacionados con la naturaleza del negocio, verificación en bases de datos y beneficios adicionales como sorteos, promociones, publicidad.</p>
+                        <label>
+                            <input id="regPoliticas" type="checkbox" required>
+                            <small>Al registrarse, usted acepta nuestras condiciones de uso y políticas de privacidad</small>
+                        </label>
+                    </div>
+                    <input type="submit" class="btn btn-default backColor btn-block" value="ENVIAR">
+                </form>
+            </div>
+            <div class="modal-footer">
+                ¿Ya tienes una cuenta registrada? | <strong><a href="#modalIngreso" data-dismiss="modal" data-toggle="modal">Ingresar</a></strong>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade modalFormulario" id="modalIngreso" role="dialog" aria-labelledby="modalIngresoLabel" aria-hidden="true">
+        <div class="modal-content modal-dialog">
+            <div class="modal-body modalTitulo">
+                <h3 class="modal-title backColor" id="modalIngresoLabel">INGRESAR</h3>
+                
+                <div class="social-login">
+                    <p class="facebook-login"><i class="fa fa-facebook"></i> Ingreso con Facebook</p>
+                    <a href="https://accounts.google.com/o/oauth2/auth?response_type=code&access_type=offline&client_id=TU_CLIENT_ID_GOOGLE&redirect_uri=TU_REDIRECT_URI&state&scope=profile%20email&approval_prompt=auto">
+                        <p class="google-login"><i class="fa fa-google"></i> Ingreso con Google</p>
+                    </a>
+                </div>
+
+                <form method="post">
+                    <hr>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <input type="email" class="form-control input-lg" id="ingEmail" name="ingEmail" placeholder="Correo Electrónico" required="" aria-label="Correo Electrónico">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input type="password" class="form-control input-lg" id="ingPassword" name="ingPassword" placeholder="Contraseña" required="" aria-label="Contraseña">
+                        </div>
+                    </div>
+                    <br>
+                    <input type="submit" class="btn btn-default backColor btn-block btnIngreso" value="ENVIAR">
+                    <br>
+                    <div style="text-align: center;">
+                        <a href="#modalPassword" data-dismiss="modal" data-toggle="modal">¿Olvidaste tu contraseña?</a>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                ¿No tienes una cuenta registrada? | <strong><a href="#modalRegistro" data-dismiss="modal" data-toggle="modal">Registrarse</a></strong>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade modalFormulario" id="modalPassword" role="dialog" aria-labelledby="modalPasswordLabel" aria-hidden="true">
+        <div class="modal-content modal-dialog">
+            <div class="modal-body modalTitulo">
+                <h3 class="modal-title backColor" id="modalPasswordLabel">SOLICITUD DE NUEVA CONTRASEÑA</h3>
+                
+                <form method="post">
+                    <label class="text-muted">Escribe el correo electrónico con el que estás registrado y allí te enviaremos una nueva contraseña:</label>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <input type="email" class="form-control input-lg" id="passEmail" name="passEmail" placeholder="Correo Electrónico" required="" aria-label="Correo Electrónico para nueva contraseña">
+                        </div>
+                    </div>
+                    <input type="submit" class="btn btn-default backColor btn-block" value="ENVIAR">
+                </form>
+            </div>
+            <div class="modal-footer">
+                ¿No tienes una cuenta registrada? | <strong><a href="#modalRegistro" data-dismiss="modal" data-toggle="modal">Registrarse</a></strong>
+            </div>
+        </div>
+    </div>
+
+    <section class="main-slider" id="main-slider">
+        <div class="slider-container flexslider">
+            <ul class="slides">
+                <li>
+                    <img src="http://darmacionline.com/ecommercecpanel/vistas/img/slide/default/fondo.jpg" alt="Fondo de Slide 1: Darmacio">
+                    <div class="slide-content slide-content--1">
+                        <img class="product-image" src="http://darmacionline.com/ecommercecpanel/vistas/img/slide/slide8/producto.jpg" alt="Producto Destacado">
+                        <div class="text-content">
+                            <h1 style="color:#ff6c1c;">DARMACIO</h1>
+                            <h2 style="color:#404040;">QUEDA ESTRICTAMENTE PROHIBIDO RENDIRSE</h2>
+                            <h3 style="color:#888;">Colección Primavera/Verano 2025</h3>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="http://darmacionline.com/ecommercecpanel/vistas/img/slide/slide10/fondo.jpg" alt="Fondo de Slide 2: Nueva Colección">
+                    <div class="slide-content slide-content--2">
+                           <div class="text-content">
+                               <h1 style="color:#333;">Estilo que te Define</h1>
+                               <h2 style="color:#777;">Explora las últimas tendencias</h2>
+                               <h3 style="color:#888;">Prendas exclusivas para cada ocasión</h3>
+                           </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="http://darmacionline.com/ecommercecpanel/vistas/img/slide/slide11/fondo.png" alt="Fondo de Slide 3: Ofertas Especiales">
+                    <div class="slide-content slide-content--3">
+                           <div class="text-content">
+                               <h1 style="color:#333;">Ofertas Imperdibles</h1>
+                               <h2 style="color:#777;">Hasta 50% de descuento en artículos seleccionados</h2>
+                               <h3 style="color:#888;">¡No te lo pierdas!</h3>
+                           </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="slider-nav-arrows">
+            <div class="arrow-prev" id="retroceder"><span class="fa fa-chevron-left"></span></div>
+            <div class="arrow-next" id="avanzar"><span class="fa fa-chevron-right"></span></div>
+        </div>
+    </section>
+
+    <button id="btnSlide" class="btn-slide-toggle">
+        <i class="fa fa-angle-up"></i>
+    </button>
+
+    <main class="main-content">
+        <section class="products-featured container">
+            <h2>Productos Destacados</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/default-product.jpg" alt="Camiseta Deportiva">
+                        <h3>Camiseta Deportiva Elite</h3>
+                    </a>
+                    <p class="price">$29.99</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/default-product.jpg" alt="Jeans Slim Fit">
+                        <h3>Jeans Slim Fit Clásico</h3>
+                    </a>
+                    <p class="price">$45.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/default-product.jpg" alt="Reloj Inteligente">
+                        <h3>Smartwatch Serie X</h3>
+                    </a>
+                    <p class="price">$199.99</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/default-product.jpg" alt="Zapatillas Urbanas">
+                        <h3>Zapatillas Urbanas Pro</h3>
+                    </a>
+                    <p class="price">$75.50</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/default-product.jpg" alt="Mochila Moderna">
+                        <h3>Mochila Casual City</h3>
+                    </a>
+                    <p class="price">$39.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/default-product.jpg" alt="Vestido de Verano">
+                        <h3>Vestido Floral Verano</h3>
+                    </a>
+                    <p class="price">$55.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+            </div>
+            <div class="text-center view-more-button">
+                <a href="https://darmacionline.com/productos" class="btn-view-all">Ver todos los productos <i class="fa fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <section class="category-section container" id="hombre-ropa">
+            <h2 class="category-title">ROPA PARA HOMBRE</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/hombre/ropa/camiseta_basica.jpg" alt="Camiseta Básica Hombre">
+                        <h3>Camiseta Básica Algodón</h3>
+                    </a>
+                    <p class="price">$15.99</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/hombre/ropa/pantalon_jean.jpg" alt="Pantalón Jean Slim Fit">
+                        <h3>Pantalón Jean Slim Fit</h3>
+                    </a>
+                    <p class="price">$49.99</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/hombre/ropa/chompa_deportiva.jpg" alt="Chompa Deportiva Hombre">
+                        <h3>Chompa Deportiva Casual</h3>
+                    </a>
+                    <p class="price">$35.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/hombre/ropa/camisa_casual.jpg" alt="Camisa Casual Hombre">
+                        <h3>Camisa Casual Cuadros</h3>
+                    </a>
+                    <p class="price">$29.99</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/hombre/ropa/bermuda_algodon.jpg" alt="Bermuda Algodón Hombre">
+                        <h3>Bermuda de Algodón</h3>
+                    </a>
+                    <p class="price">$22.50</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/hombre/ropa/sudadera_hoodie.jpg" alt="Sudadera Hoodie Hombre">
+                        <h3>Sudadera con Capucha</h3>
+                    </a>
+                    <p class="price">$40.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+            </div>
+            <div class="text-center view-more-button">
+                <a href="https://darmacionline.com/hombre/ropa" class="btn-view-all">Ver más ropa de hombre <i class="fa fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <section class="category-section container" id="hombre-calzado">
+            <h2 class="category-title">CALZADO PARA HOMBRE</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/hombre/calzado/zapatillas_deportivas.jpg" alt="Zapatillas Deportivas Hombre">
+                        <h3>Zapatillas Running Pro</h3>
+                    </a>
+                    <p class="price">$85.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/hombre/calzado/botas_cuero.jpg" alt="Botas de Cuero Hombre">
+                        <h3>Botas de Cuero Urbano</h3>
+                    </a>
+                    <p class="price">$110.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/hombre/calzado/zapatos_casuales.jpg" alt="Zapatos Casuales Hombre">
+                        <h3>Zapatos Casuales Elegantes</h3>
+                    </a>
+                    <p class="price">$70.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/hombre/calzado/sandalias_playa.jpg" alt="Sandalias Playa Hombre">
+                        <h3>Sandalias de Playa Confort</h3>
+                    </a>
+                    <p class="price">$25.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/hombre/calzado/mocasines.jpg" alt="Mocasines Hombre">
+                        <h3>Mocasines Clásicos</h3>
+                    </a>
+                    <p class="price">$60.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/hombre/calzado/tenis_urbanos.jpg" alt="Tenis Urbanos Hombre">
+                        <h3>Tenis Urbanos Modernos</h3>
+                    </a>
+                    <p class="price">$78.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+            </div>
+            <div class="text-center view-more-button">
+                <a href="https://darmacionline.com/hombre/calzado" class="btn-view-all">Ver más calzado de hombre <i class="fa fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <section class="category-section container" id="mujer-ropa">
+            <h2 class="category-title">ROPA PARA MUJER</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/mujer/ropa/vestido_elegante.jpg" alt="Vestido de Noche Mujer">
+                        <h3>Vestido de Noche Sensual</h3>
+                    </a>
+                    <p class="price">$79.99</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/mujer/ropa/blusa_casual.jpg" alt="Blusa Casual Mujer">
+                        <h3>Blusa Casual de Verano</h3>
+                    </a>
+                    <p class="price">$25.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/mujer/ropa/falda_lapiz.jpg" alt="Falda Lápiz Mujer">
+                        <h3>Falda Lápiz Oficina</h3>
+                    </a>
+                    <p class="price">$38.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/mujer/ropa/jeans_skinny.jpg" alt="Jeans Skinny Mujer">
+                        <h3>Jeans Skinny Tiro Alto</h3>
+                    </a>
+                    <p class="price">$48.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/mujer/ropa/top_croptop.jpg" alt="Crop Top Mujer">
+                        <h3>Crop Top Tejido</h3>
+                    </a>
+                    <p class="price">$19.99</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/mujer/ropa/chaqueta_cuero.jpg" alt="Chaqueta Cuero Mujer">
+                        <h3>Chaqueta de Cuero Elegante</h3>
+                    </a>
+                    <p class="price">$95.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+            </div>
+            <div class="text-center view-more-button">
+                <a href="https://darmacionline.com/mujer/ropa" class="btn-view-all">Ver más ropa de mujer <i class="fa fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <section class="category-section container" id="mujer-calzado">
+            <h2 class="category-title">CALZADO PARA MUJER</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/mujer/calzado/tacos_elegantes.jpg" alt="Zapatos de Tacón Mujer">
+                        <h3>Tacones Clásicos Negros</h3>
+                    </a>
+                    <p class="price">$65.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/mujer/calzado/botines_casuales.jpg" alt="Botines Casuales Mujer">
+                        <h3>Botines Casuales Cuero</h3>
+                    </a>
+                    <p class="price">$89.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/mujer/calzado/sandalias_plataforma.jpg" alt="Sandalias Plataforma Mujer">
+                        <h3>Sandalias de Plataforma</h3>
+                    </a>
+                    <p class="price">$45.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/mujer/calzado/flats_bailarinas.jpg" alt="Flats Bailarinas Mujer">
+                        <h3>Flats Estilo Bailarina</h3>
+                    </a>
+                    <p class="price">$30.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/mujer/calzado/zapatillas_urbanas.jpg" alt="Zapatillas Urbanas Mujer">
+                        <h3>Zapatillas Urbanas Chic</h3>
+                    </a>
+                    <p class="price">$58.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/mujer/calzado/botas_altas.jpg" alt="Botas Altas Mujer">
+                        <h3>Botas Altas de Invierno</h3>
+                    </a>
+                    <p class="price">$120.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+            </div>
+            <div class="text-center view-more-button">
+                <a href="https://darmacionline.com/mujer/calzado" class="btn-view-all">Ver más calzado de mujer <i class="fa fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <section class="category-section container" id="nino-ropa">
+            <h2 class="category-title">ROPA PARA NIÑO</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/nino/ropa/camiseta_estampada.jpg" alt="Camiseta Estampada Niño">
+                        <h3>Camiseta Estampada Cool</h3>
+                    </a>
+                    <p class="price">$12.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/nino/ropa/pantalon_deportivo.jpg" alt="Pantalón Deportivo Niño">
+                        <h3>Pantalón Deportivo Confort</h3>
+                    </a>
+                    <p class="price">$18.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                 <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/nino/ropa/conjunto_verano.jpg" alt="Conjunto Verano Niño">
+                        <h3>Conjunto Verano Rayas</h3>
+                    </a>
+                    <p class="price">$28.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/nino/ropa/chaqueta_impermeable.jpg" alt="Chaqueta Impermeable Niño">
+                        <h3>Chaqueta Impermeable Ligera</h3>
+                    </a>
+                    <p class="price">$45.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/nino/ropa/pijama_divertida.jpg" alt="Pijama Niño">
+                        <h3>Pijama de Personajes</h3>
+                    </a>
+                    <p class="price">$22.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/nino/ropa/sudadera_estampada.jpg" alt="Sudadera Estampada Niño">
+                        <h3>Sudadera con Estampado</h3>
+                    </a>
+                    <p class="price">$30.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+            </div>
+            <div class="text-center view-more-button">
+                <a href="https://darmacionline.com/nino/ropa" class="btn-view-all">Ver más ropa de niño <i class="fa fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <section class="category-section container" id="nina-ropa">
+            <h2 class="category-title">ROPA PARA NIÑA</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/nina/ropa/vestido_flores.jpg" alt="Vestido Flores Niña">
+                        <h3>Vestido de Flores Primaveral</h3>
+                    </a>
+                    <p class="price">$28.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/nina/ropa/blusa_volantes.jpg" alt="Blusa Volantes Niña">
+                        <h3>Blusa de Volantes Dulce</h3>
+                    </a>
+                    <p class="price">$16.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/nina/ropa/conjunto_princesa.jpg" alt="Conjunto Princesa Niña">
+                        <h3>Conjunto Tutú Princesa</h3>
+                    </a>
+                    <p class="price">$35.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/nina/ropa/pantalon_legging.jpg" alt="Pantalón Legging Niña">
+                        <h3>Legging con Estampado</h3>
+                    </a>
+                    <p class="price">$14.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/nina/ropa/abrigo_invierno.jpg" alt="Abrigo Invierno Niña">
+                        <h3>Abrigo Cálido Invierno</h3>
+                    </a>
+                    <p class="price">$50.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/nina/ropa/falda_tul.jpg" alt="Falda de Tul Niña">
+                        <h3>Falda de Tul Brillante</h3>
+                    </a>
+                    <p class="price">$20.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+            </div>
+            <div class="text-center view-more-button">
+                <a href="https://darmacionline.com/nina/ropa" class="btn-view-all">Ver más ropa de niña <i class="fa fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <section class="promotions-section container">
+            <h2>Nuestras Mejores Promociones</h2>
+            <div class="promo-banner">
+                <img src="http://darmacionline.com/ecommercecpanel/vistas/img/promociones/promo-banner-ejemplo.jpg" alt="Banner de Promoción: Grandes Descuentos">
+                <h3>Ofertas Exclusivas por Tiempo Limitado</h3>
+                <p>¡No te pierdas nuestros descuentos increíbles en todas las categorías!</p>
+                <a href="https://darmacionline.com/promociones" class="btn-view-promos">Ver Todas las Promociones</a>
+            </div>
+            <div class="product-grid promo-products">
+                <div class="product-card promo-item">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/default-product.jpg" alt="Producto en Oferta 1">
+                        <h3>Producto A (20% OFF)</h3>
+                    </a>
+                    <p class="old-price">$30.00</p>
+                    <p class="price new-price">$24.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card promo-item">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/default-product.jpg" alt="Producto en Oferta 2">
+                        <h3>Producto B (30% OFF)</h3>
+                    </a>
+                    <p class="old-price">$50.00</p>
+                    <p class="price new-price">$35.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card promo-item">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/default-product.jpg" alt="Producto en Oferta 3">
+                        <h3>Producto C (15% OFF)</h3>
+                    </a>
+                    <p class="old-price">$100.00</p>
+                    <p class="price new-price">$85.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="category-section container" id="tecnologia-celulares">
+            <h2 class="category-title">ÚLTIMOS CELULARES</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/tecnologia/celulares/smartphone_modelo_a.jpg" alt="Smartphone Modelo A">
+                        <h3>Smartphone Modelo A</h3>
+                    </a>
+                    <p class="price">$499.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/tecnologia/celulares/smartphone_modelo_b.jpg" alt="Smartphone Modelo B">
+                        <h3>Smartphone Modelo B</h3>
+                    </a>
+                    <p class="price">$699.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/tecnologia/celulares/smartphone_modelo_c.jpg" alt="Smartphone Modelo C">
+                        <h3>Smartphone Modelo C</h3>
+                    </a>
+                    <p class="price">$350.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                 <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/tecnologia/celulares/smartphone_modelo_d.jpg" alt="Smartphone Modelo D">
+                        <h3>Smartphone Modelo D</h3>
+                    </a>
+                    <p class="price">$899.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+            </div>
+            <div class="text-center view-more-button">
+                <a href="https://darmacionline.com/tecnologia/celulares" class="btn-view-all">Ver todos los celulares <i class="fa fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <section class="category-section container" id="accesorios">
+            <h2 class="category-title">ACCESORIOS PARA TODOS</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/accesorios/gafas_sol.jpg" alt="Gafas de Sol">
+                        <h3>Gafas de Sol Urbanas</h3>
+                    </a>
+                    <p class="price">$39.99</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/accesorios/collar_elegante.jpg" alt="Collar Elegante">
+                        <h3>Collar de Plata Fina</h3>
+                    </a>
+                    <p class="price">$55.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/accesorios/mochila_moderna.jpg" alt="Mochila Moderna">
+                        <h3>Mochila de Cuero</h3>
+                    </a>
+                    <p class="price">$70.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/accesorios/audifonos_bluetooth.jpg" alt="Audífonos Bluetooth">
+                        <h3>Auriculares Bluetooth</h3>
+                    </a>
+                    <p class="price">$89.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/accesorios/cinturon_cuero.jpg" alt="Cinturón Cuero">
+                        <h3>Cinturón de Cuero Clásico</h3>
+                    </a>
+                    <p class="price">$30.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/accesorios/pulsera_diseño.jpg" alt="Pulsera Diseño">
+                        <h3>Pulsera de Diseño Único</h3>
+                    </a>
+                    <p class="price">$25.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+            </div>
+            <div class="text-center view-more-button">
+                <a href="https://darmacionline.com/accesorios" class="btn-view-all">Ver todos los accesorios <i class="fa fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <section class="category-section container" id="junior-ropa">
+            <h2 class="category-title">ROPA PARA JUNIOR</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/junior/ropa/camiseta_juvenil.jpg" alt="Camiseta Juvenil">
+                        <h3>Camiseta Gráfica Juvenil</h3>
+                    </a>
+                    <p class="price">$20.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/junior/ropa/hoodie_juvenil.jpg" alt="Hoodie Juvenil">
+                        <h3>Hoodie Oversize Moderno</h3>
+                    </a>
+                    <p class="price">$40.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/junior/ropa/jeans_juvenil.jpg" alt="Jeans Juvenil">
+                        <h3>Jeans Rotos Estilo Urbano</h3>
+                    </a>
+                    <p class="price">$45.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/junior/ropa/vestido_juvenil.jpg" alt="Vestido Juvenil">
+                        <h3>Vestido Casual Corto</h3>
+                    </a>
+                    <p class="price">$35.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+            </div>
+            <div class="text-center view-more-button">
+                <a href="https://darmacionline.com/junior/ropa" class="btn-view-all">Ver más ropa de junior <i class="fa fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <section class="category-section container" id="junior-calzado">
+            <h2 class="category-title">CALZADO PARA JUNIOR</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/junior/calzado/zapatillas_juveniles.jpg" alt="Zapatillas Juveniles">
+                        <h3>Zapatillas Skater Estilo</h3>
+                    </a>
+                    <p class="price">$60.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/junior/calzado/botas_juveniles.jpg" alt="Botas Juveniles">
+                        <h3>Botas Estilo Militar</h3>
+                    </a>
+                    <p class="price">$75.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <a href="#">
+                        <img src="http://darmacionline.com/ecommercecpanel/vistas/img/productos/junior/calzado/sandalias_urbanas_juvenil.jpg" alt="Sandalias Urbanas Juvenil">
+                        <h3>Sandalias Urbanas Verano</h3>
+                    </a>
+                    <p class="price">$28.00</p>
+                    <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+            </div>
+            <div class="text-center view-more-button">
+                <a href="https://darmacionline.com/junior/calzado" class="btn-view-all">Ver más calzado de junior <i class="fa fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-column about-us">
+                <h4>Sobre Nosotros</h4>
+                <p>Darmac Online es tu destino para la moda más actual. Comprometidos con la calidad y la satisfacción del cliente.</p>
+            </div>
+            <div class="footer-column quick-links">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#">Mi Cuenta</a></li>
+                    <li><a href="#">Historial de Pedidos</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Contactos</a></li>
+                </ul>
+            </div>
+            <div class="footer-column contact-info">
+                <h4>Contacto</h4>
+                <p><i class="fa fa-phone"></i> +593 999 999 999</p>
+                <p><i class="fa fa-envelope"></i> info@darmacionline.com</p>
+                <p><i class="fa fa-map-marker"></i> Dirección de tu tienda</p>
+            </div>
+            <div class="footer-column social-media-footer">
+                <h4>Síguenos</h4>
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/darmacionline/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/darmacionline/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/DarmacOnline" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                </ul>
+            </div>
+        </div>
+         <div class="footer-bottom">
+            <div class="container">
+                <p>© 2025 Darmac Online. Todos los derechos reservados.</p>
+                </div> </div> </footer>
+
+    <script src="js/plugins/jquery.min.js"></script>
+    <script src="js/plugins/bootstrap.min.js"></script>
+    <script src="js/plugins/jquery.flexslider.js"></script>
+    <script src="js/plugins/sweetalert.min.js"></script>
+    <script src="js/plugins/dscountdown.min.js"></script>
+    <script src="js/plantilla.js"></script>
+    <script src="js/cabecera.js"></script>
+    <script src="js/slide.js"></script>
+    <script src="js/usuarios.js"></script>
+    <script src="js/productos.js"></script>
+    <script src="js/carrito.js"></script>
+
+</body>
+</html>

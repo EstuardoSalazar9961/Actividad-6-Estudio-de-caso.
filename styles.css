@@ -1,0 +1,358 @@
+/* Resets básicos (opcionalmente puedes usar un reset.css o normalize.css) */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Variables CSS (Custom Properties) */
+:root {
+    --primary-color: #007bff; /* Color de ejemplo, usar el de la marca */
+    --secondary-color: #f8f9fa;
+    --text-color-dark: #333;
+    --text-color-light: #fff;
+    --bg-dark: #212529; /* Color de fondo para barra superior/footer */
+
+    --font-family-base: 'Ubuntu', sans-serif;
+
+    /* Breakpoints (puntos de quiebre) */
+    --breakpoint-tablet: 768px;
+    --breakpoint-desktop: 992px;
+    --breakpoint-large-desktop: 1200px;
+}
+
+/* Estilos base */
+body {
+    font-family: var(--font-family-base);
+    color: var(--text-color-dark);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* Hereda el color del texto principal */
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%; /* Asegura que las imágenes no desborden */
+    height: auto;
+    display: block; /* Elimina espacio extra debajo de las imágenes */
+}
+
+/* Estilos para el contenedor central */
+.container {
+    max-width: 1200px; /* Ancho máximo del sitio */
+    margin: 0 auto;
+    padding: 0 15px; /* Padding a los lados para móvil */
+}
+
+CSS
+
+.top-bar {
+    background-color: var(--bg-dark);
+    color: var(--text-color-light);
+    padding: 10px 0
+}
+
+.top-bar__inner {
+    display: flex;
+    flex-direction: column; /* Apilar en móvil */
+    align-items: center;
+    gap: 10px; /* Espacio entre elementos */
+}
+
+.social-links ul, .user-auth ul {
+    display: flex;
+    gap: 15px;
+}
+
+.user-auth li {
+    font-size: 0.9rem;
+}
+
+/* Header Principal */
+.main-header {
+    background-color: var(--secondary-color);
+    padding: 15px 0;
+}
+
+.main-header__inner {
+    display: flex;
+    flex-direction: column; /* Apilar en móvil */
+    align-items: center;
+    gap: 20px;
+}
+
+.logo img {
+    max-width: 150px; /* Tamaño del logo en móvil */
+}
+
+.header-search-category {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-categories {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    border: none;
+    padding: 10px 15px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-form {
+    display: flex;
+    width: 100%;
+}
+
+.search-form input {
+    flex-grow: 1;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-form button {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.cart-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-cart {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.cart-info p {
+    font-size: 0.9rem;
+    line-height: 1.2;
+}
+
+/* Menú de Categorías (oculto por defecto en móvil, mostrado por JS) */
+.categories-nav {
+    display: none; /* Se mostrará con JS/CSS para el menú hamburguesa */
+    width: 100%;
+    background-color: #f0f0f0; /* Fondo del menú desplegable */
+    position: absolute; /* O fixed, dependiendo del efecto deseado */
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.categories-nav.is-active { /* Clase activada por JavaScript */
+    display: block;
+}
+
+.categories-nav ul {
+    display: flex;
+    flex-direction: column; /* Apilar en móvil */
+    gap: 5px;
+}
+
+.category-item h4 {
+    margin-bottom: 5px;
+}
+
+.category-item ul {
+    padding-left: 20px; /* Indentar subcategorías */
+    font-size: 0.9rem;
+}
+
+/* SLIDESHOW (Simplificado para el layout) */
+.main-slider {
+    position: relative;
+    height: 200px; /* Altura fija para móvil, ajustar con JS o viewports */
+    overflow: hidden;
+}
+
+.slider-container {
+    width: 100%;
+    height: 100%;
+}
+.slider-container ul { /* Flexslider manejará esto */
+    display: flex;
+    height: 100%;
+}
+.slider-container ul li {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0; /* No permitir que los slides se encojan */
+}
+.slider-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajustar imagen para cubrir el área */
+}
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: var(--text-color-light);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+.slide-content h1 { font-size: 1.8rem; margin-bottom: 5px; }
+.slide-content h2 { font-size: 1.2rem; margin-bottom: 10px; }
+.slide-content .product-image {
+    position: absolute;
+    width: 100px; /* Ajustar tamaño de imagen del producto en móvil */
+    height: auto;
+    top: 10px;
+    right: 10px;
+}
+
+/* Paginación y Flechas del Slide (Ajuste para móvil) */
+.slider-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+.slider-pagination li span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.7);
+    cursor: pointer;
+}
+.slider-pagination li.active span {
+    background-color: var(--primary-color);
+}
+
+.slider-nav-arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 10px;
+}
+.slider-nav-arrows div {
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-slide-toggle {
+    display: block;
+    margin: 10px auto;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+
+/* Media Queries (Aplicar estilos para tablet y desktop) */
+
+@media (min-width: var(--breakpoint-tablet)) {
+    .top-bar__inner {
+        flex-direction: row; /* Volver a horizontal */
+        justify-content: space-between;
+    }
+
+    .main-header__inner {
+        flex-direction: row; /* Volver a horizontal */
+        justify-content: space-between;
+    }
+
+    .logo img {
+        max-width: 200px; /* Tamaño del logo en tablet/desktop */
+    }
+
+    .header-search-category {
+        flex-direction: row; /* Volver a horizontal */
+        width: auto; /* Ocupar el espacio necesario */
+        flex-grow: 1; /* Permite que el buscador ocupe más espacio */
+        max-width: 600px; /* Limita el ancho en pantallas grandes */
+    }
+
+    .btn-categories {
+        width: auto; /* El botón de categorías no ocupa todo el ancho */
+        margin-right: 10px; /* Espacio entre botón y buscador */
+        font-size: 1rem;
+    }
+
+    .categories-nav {
+        display: block; /* Siempre visible en tablet/desktop */
+        position: static; /* No flotante */
+        box-shadow: none;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .categories-nav .container {
+        display: flex;
+        justify-content: space-around; /* Distribuir categorías horizontalmente */
+        flex-wrap: wrap; /* Permitir que las categorías se envuelvan */
+    }
+
+    .categories-nav ul {
+        flex-direction: row; /* Las categorías principales vuelven a ser horizontales */
+        gap: 20px;
+    }
+
+    .category-item {
+        /* Permite que cada columna ocupe el espacio deseado en desktop */
+        width: 16%; /* Ejemplo: 6 columnas para lg, 4 para md */
+    }
+
+    .category-item ul {
+        padding-left: 0; /* Quitar indentación para desktop */
+    }
+
+    .main-slider {
+        height: 350px; /* Altura para tablet/desktop */
+    }
+    .slide-content h1 { font-size: 2.5rem; }
+    .slide-content h2 { font-size: 1.8rem; }
+    .slide-content .product-image {
+        width: 200px; /* Tamaño de imagen del producto en desktop */
+    }
+}
+@media (min-width: var(--breakpoint-desktop)) {
+    .main-slider {height: 450px;
+    }
+    .slide-content h1 { font-size: 3rem; 
+    }
+    .slide-content h2 { font-size: 2rem; 
+    }
+    .slide-content .product-image { width: 250px;
+    }
+}

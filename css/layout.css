@@ -1,0 +1,214 @@
+/* ... (tu código CSS anterior en layout.css) ... */
+
+/* Contenido Principal (Ejemplo) */
+.main-content {
+    padding: 30px 0;
+}
+
+.main-content h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+/* Estilo para los títulos de las secciones de categoría */
+.category-title {
+    text-align: center;
+    margin: 40px 0 30px 0;
+    font-size: 2.2rem;
+    color: var(--text-color-dark);
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    display: inline-block; /* Para que la línea se ajuste al texto */
+    width: auto;
+    max-width: 90%; /* Evita desbordamiento en móvil */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-grid {
+    display: grid;
+    /* En móvil, una columna o dos pequeñas */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* 2 columnas en móviles */
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #eee;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Para empujar el botón al final */
+}
+.product-card a {
+    color: inherit; /* Hereda color de texto para el título */
+}
+.product-card a:hover {
+    color: var(--primary-color);
+}
+.product-card img {
+    max-width: 100%;
+    height: 150px; /* Altura fija para las imágenes de producto */
+    object-fit: cover; /* Recorta la imagen para que encaje */
+    margin: 0 auto 10px auto; /* Centrar y espacio debajo */
+    border-radius: 4px;
+}
+.product-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    min-height: 2.2em; /* Altura mínima para evitar saltos de layout */
+    display: -webkit-box; /* Requerido para -webkit-line-clamp */
+    -webkit-box-orient: vertical; /* Requerido para -webkit-line-clamp */
+    -webkit-line-clamp: 2; /* Limita a 2 líneas para navegadores WebKit */
+    line-clamp: 2; /* Propiedad estándar para limitar a 2 líneas */
+    overflow: hidden;
+}
+.product-card .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: auto; /* Empuja el precio y botón al final */
+    margin-bottom: 15px;
+}
+.product-card .old-price {
+    font-size: 0.9rem;
+    color: #999;
+    text-decoration: line-through;
+    margin-bottom: 5px;
+}
+.product-card .new-price {
+    color: #d9534f; /* Rojo para el precio de oferta */
+}
+
+.btn-add-cart {
+    background-color: #5cb85c; 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Ocupa todo el ancho de la tarjeta */
+}
+.btn-add-cart:hover {
+    background-color: darken(#5cb85c, 10%);
+}
+
+.promo-banner {
+    text-align: center;
+    margin-top: 40px;
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.promo-banner img {
+    max-width: 90%;
+    margin: 0 auto 20px auto;
+    border-radius: 8px;
+}
+.promo-banner h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+.promo-banner p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+.btn-view-promos {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    padding: 12px 25px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.btn-view-promos:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
+
+.view-more-button {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.btn-view-all {
+    display: inline-block;
+    background-color: #6c757d; /* Un gris para "ver más" */
+    color: var(--text-color-light);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.btn-view-all:hover {
+    background-color: darken(#6c757d, 10%);
+}
+
+
+/* FOOTER */
+.main-footer {
+    background-color: var(--bg-dark);
+    color: #bbb;
+    padding: 40px 0 20px 0;
+    font-size: 0.9rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna en móvil */
+    gap: 30px;
+    margin-bottom: 20px;
+    text-align: center; /* Centrar contenido de columnas en móvil */
+}
+
+.footer-column h4 {
+    color: var(--text-color-light);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar elementos de lista */
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #bbb;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: var(--primary-color);
+}
+
+.social-media-footer .social-icons {
+    display: flex;
+    justify-content: center; /* Centrar iconos sociales */
+    gap: 15px;
+    font-size: 1.5rem;
+}
+
+.social-media-footer .social-icons a {
+    color: var(--text-color-light);
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 0.8rem;
+}

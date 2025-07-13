@@ -1,0 +1,66 @@
+/* RESPONSIVE CSS - SOBREESCRIBE ESTILOS PARA PANTALLAS GRANDES */
+
+/* Media Query para Tablet (min-width: 768px) */
+@media (min-width: var(--breakpoint-tablet)) {
+    /* ... (tu código anterior de tablet en responsive.css) ... */
+    
+    /* Product Grid para Tablet: 3 columnas */
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 3 columnas en tablet */
+    }
+
+    .product-card img {
+        height: 180px; /* Ajusta altura de imagen de producto */
+    }
+
+    .promo-banner img {
+        max-width: 70%; /* Ajuste de tamaño de banner */
+    }
+
+    /* Footer para Tablet: 2 columnas */
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        text-align: left; /* Alinear contenido de columnas a la izquierda */
+    }
+    .footer-column ul {
+        align-items: flex-start; /* Alinear elementos de lista a la izquierda */
+    }
+    .social-media-footer .social-icons {
+        justify-content: flex-start; /* Alinear iconos sociales a la izquierda */
+    }
+}
+
+/* Media Query para Desktop (min-width: 992px) */
+@media (min-width: var(--breakpoint-desktop)) {
+    /* ... (tu código anterior de desktop en responsive.css) ... */
+
+    /* Product Grid para Desktop: 4 o 5 columnas */
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* 4 columnas en desktop */
+    }
+
+    .product-card img {
+        height: 200px; /* Ajusta altura de imagen de producto */
+    }
+
+    .promo-banner img {
+        max-width: 60%;
+    }
+
+    /* Footer para Desktop: 4 columnas */
+    .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Media Query para Escritorios muy grandes (min-width: 1200px) */
+@media (min-width: var(--breakpoint-large-desktop)) {
+    /* ... (tu código anterior de large desktop en responsive.css) ... */
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 4 o 5 columnas en pantallas muy grandes */
+    }
+    .product-card img {
+        height: 220px; /* Altura de imagen para pantallas muy grandes */
+    }
+}
